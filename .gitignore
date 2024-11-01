@@ -27,10 +27,10 @@ yarn-error.log*
 
 # local env files
 .env*.local
-header.tsx
-schema.prisma
-dialog.tsx
-choose-product-modal.tsx
+# header.tsx
+# schema.prisma
+# dialog.tsx
+# choose-product-modal.tsx
 
 # vercel
 .vercel
