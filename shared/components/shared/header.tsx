@@ -9,9 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SearchInput } from "./search-input";
 import { CartButton } from "./cart-button";
-import { User } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
-import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 import { ProfileButton } from "./profile-button";
 import { AuthModal } from "./modals";
 
@@ -29,29 +27,7 @@ export const Header: React.FC<Props> = ({
   const router = useRouter();
   const [openAuthModal, setOpenAuthModal] = React.useState(false);
 
-  const searchParams = useSearchParams();
-
-  React.useEffect(() => {
-    let toastMessage = "";
-
-    if (searchParams.has("paid")) {
-      toastMessage =
-        "The order has been successfully paid! Information has been sent to the email.";
-    }
-
-    if (searchParams.has("verified")) {
-      toastMessage = "Email has been successfully confirmed!";
-    }
-
-    if (toastMessage) {
-      setTimeout(() => {
-        router.replace("/");
-        toast.success(toastMessage, {
-          duration: 3000,
-        });
-      }, 1000);
-    }
-  }, []);
+  React.useEffect(() => {}, []);
 
   return (
     <header className={cn("border-b", className)}>

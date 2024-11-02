@@ -26,7 +26,7 @@ export const useQueryFilters = (filters: Filters) => {
         scroll: false,
       });
 
-      console.log(filters, 999);
+      // console.log(filters, 999);
     }
 
     isMounted.current = true;
